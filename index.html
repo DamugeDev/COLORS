@@ -6,34 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CORES</title>
     <script>
-     function trocarcor(id) {
-if (id == "vermelho") {
-    document.getElementsByTagName("body")[0].style.background = "red"
-}
-else if(id == "azul"){ document.getElementsByTagName("body")[0].style.background = "blue"}
-else if(id == "verde"){  document.getElementsByTagName("body")[0].style.background = "green"}
-
-console.log(id)}
+        var n1=document.getElementById("n1").getValue();
+        var n2=document.getElementById("n2").getValue();
+        var resu=document.getElementById("resultado");
+        var valor= n1+n2;
+        resu.innerHTML=resu;
     </script>
     <style>
         body{
         text-align:center;}
         
-        #vermelho{
-            background-color: red; color:white;
-        }
-        #azul{
-            background-color: blue; color:white;
-        }
-        #verde{
-            background-color: green; color:white;
-        }
+       
     </style>
 </head>
 <body>
     <h1><marquee>Damuge Leonardo</marquee></h1>
-    <button id="azul" onclick="trocarcor(id)">Azul</button>
-        <button id="verde" onclick="trocarcor(id)">Verde</button>
-        <button id="vermelho" onclick="trocarcor(id)">Vermelho</button>
+   <input type="number" id="n1"> + <input type="number" id="n2"> 
+    <p></p>
+    <button onclick="calcular()">Calcular</button>
+    <input type="number" id="resultado">
 </body>
 </html>
