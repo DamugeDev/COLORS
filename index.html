@@ -16,19 +16,22 @@ else if(id == "verde"){  document.getElementsByTagName("body")[0].style.backgrou
 console.log(id)}
     </script>
     <style>
+        body{
+        text-align:center;}
+        
         #vermelho{
-            background-color: red;
+            background-color: red; color:white;
         }
         #azul{
-            background-color: blue;
+            background-color: blue; color:white;
         }
         #verde{
-            background-color: green;
+            background-color: green; color:white;
         }
     </style>
 </head>
 <body>
-    <h1>Damuge Leonardo</h1>
+    <h1><marquee>Damuge Leonardo</marquee></h1>
     <button id="azul" onclick="trocarcor(id)">Azul</button>
         <button id="verde" onclick="trocarcor(id)">Verde</button>
         <button id="vermelho" onclick="trocarcor(id)">Vermelho</button>
