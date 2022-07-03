@@ -9,19 +9,42 @@
         var resu=document.getElementById("resultado");
         var n1=document.getElementById("n1").value;
         var n2=document.getElementById("n2").value;
-        function calcular(){
-          var resu=document.getElementById("resultado");
-        var n1=document.getElementById("n1").value;
-        var n2=document.getElementById("n2").value;  
-         var n22=parseInt(n2);var n11=parseInt(n1);
-        
-        var valor= n11+n22;
-        resu.value=valor;}
+        function somar(){
+                var resu=document.getElementById("resultado");
+                var n1=document.getElementById("n1").value;
+                var n2=document.getElementById("n2").value;  
+                var n22=parseInt(n2);var n11=parseInt(n1);       
+                var valor= n11+n22;
+                resu.value=valor;}
+         function subtrair(){
+                var resu=document.getElementById("resultado");
+                var n1=document.getElementById("n1").value;
+                var n2=document.getElementById("n2").value;  
+                var n22=parseInt(n2);var n11=parseInt(n1);       
+                var valor= n11-n22;
+                resu.value=valor;}
+         function multiplicar(){
+                var resu=document.getElementById("resultado");
+                var n1=document.getElementById("n1").value;
+                var n2=document.getElementById("n2").value;  
+                var n22=parseInt(n2);var n11=parseInt(n1);       
+                var valor= n11*n22;
+                resu.value=valor;}
+         function dividir(){
+                var resu=document.getElementById("resultado");
+                var n1=document.getElementById("n1").value;
+                var n2=document.getElementById("n2").value;  
+                var n22=parseInt(n2);var n11=parseInt(n1);
+                if(n22!=0){
+                    var valor= n11/n22;
+                    resu.value=valor;}
+                else{
+                resu.value="NAO DIVISIVEL POR 0";}}
         
         function limpar(){
             var resu=document.getElementById("resultado");
-        var n1=document.getElementById("n1");
-        var n2=document.getElementById("n2");
+            var n1=document.getElementById("n1");
+            var n2=document.getElementById("n2");
             resu.value='';
             n1.value='';
             n2.value='';
@@ -35,12 +58,16 @@
     </style>
 </head>
 <body>
-    <h1>A2</h1>
+    <h1>A3</h1>
     
-   <input type="number" id="n1"> + <input type="number" id="n2"> 
+   <input type="number" id="n1" placeholder="PRIMEIRO NUMERO">  <input type="number" id="n2" placeholder="SEGUNDO NUMERO"> 
     <p></p>
-    <button onclick="calcular()">SOMAR</button>
-    <input type="number" id="resultado">
+    <input type="text" id="resultado" placeholder="RESULTADO">
+    <button onclick="somar()">SOMAR</button>
+    <button onclick="multiplicar()">MULTIPLICAR</button>
+    <button onclick="subtrair()">SUBTRAIR</button>
+    <button onclick="dividirr()">DIVIDIR</button>
+    <p></p>
      <button onclick="limpar()">LIMPAR</button> 
    
 </body>
