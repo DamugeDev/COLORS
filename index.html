@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CORES</title>
     <script>
-        function calcular(){
-            var n1=document.getElementById("n1").value;
-        var n2=document.getElementById("n2").value; var n22=parseInt(n2);var n11=parseInt(n1);
         var resu=document.getElementById("resultado");
+        var n1=document.getElementById("n1").value;
+        var n2=document.getElementById("n2").value;
+        function calcular(){
+            
+         var n22=parseInt(n2);var n11=parseInt(n1);
+        
         var valor= n11+n22;
         resu.value=valor;}
-    //alert(valor);
+        
+        function limpar(){
+            resu.value='';
+            n1.value='';
+            n2.value='';
+        }
     </script>
     <style>
         body{
@@ -23,12 +31,12 @@
 </head>
 <body>
     <h1><marquee>CALCULADORA</marquee></h1>
-    <form>
+    
    <input type="number" id="n1"> + <input type="number" id="n2"> 
     <p></p>
     <button onclick="calcular()">SOMAR</button>
     <input type="number" id="resultado">
-     <input type="reset" id="limpar" value="LIMPAR">  
-    </form>
+     <button onclick="limpar()">LIMPAR</button> 
+   
 </body>
 </html>
